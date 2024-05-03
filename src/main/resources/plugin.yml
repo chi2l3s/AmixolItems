@@ -1,0 +1,13 @@
+name: AmixolItems
+version: '${project.version}'
+main: me.chi2l3s.amixolitems.AmixolItems
+api-version: '1.16'
+depend:
+  - WorldEdit
+  - WorldGuard
+commands:
+  ai:
+    description:  dwwdddddd
+    usage: /<command> <subcommand> [args...]
+    aliases:
+      - amixolitems

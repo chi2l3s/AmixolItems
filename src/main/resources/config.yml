@@ -1,0 +1,192 @@
+explosivetrapitem:
+  material: PRISMARINE_SHARD
+  display-name: '&#C5CBFFВ&#C0C6F8з&#BBC0F1р&#B5BBEBы&#B0B5E4в&#ABB0DDн&#A6ABD6а&#A0A5D0я &#9BA0C9т&#969BC2р&#9195BBа&#8B90B5п&#868AAEк&#8185A7а'
+  lore:
+    - ' '
+    - '&8Особенности:'
+    - ' &#C5CBFF• &fПри взрыве наносит &#C5CBFFурон в радиусе 3 блоков'
+    - '   &fи &#C5CBFFсоздаёт воронку &fв земле.'
+    - ' '
+  schematics: #добавьте 2 файла схематики в папку schematics и добавьте их названия сюда
+    - 'trap.schem'
+    - 'trap2.schem'
+  cooldown: 60 #в секундах
+  sound: ENTITY_GENERIC_EXPLODE
+  force-throwing: 2.0 #сила подбрасывания игроков, при удалении трапки
+  time: 15 #время действия трапки (в секундах)
+  region: #настройки региона, создаваемого трапкой
+    radius: 10 #радиус региона, создающийся трапкой
+    #флаги региона https://worldguard.enginehub.org/en/latest/regions/flags/#flag-listing - полный список всех флагов
+    flags: #ALLOW - разрешить | DENY - запретить (Пример 'FLAG;ALLOW/DENY')
+      - 'DAMAGE_ANIMALS;ALLOW'
+      - 'PVP;ALLOW'
+      - 'BLOCK_BREAK;DENY'
+      - 'BLOCK_PLACE;DENY'
+      - 'CHORUS_TELEPORT;DENY'
+      - 'CREEPER_EXPLOSION;DENY'
+      - 'ENDERPEARL;DENY'
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+slowingsnowball:
+  material: SNOWBALL
+  display-name: ' &#00EBFFКом снега &8&o(предмет)'
+  lore:
+    - ' '
+    - ' &7Особенности и применение:'
+    - ' &#49FFF7- при попадании таким снежком по'
+    - ' &#49FFF7  игроку он получает эффект '
+    - ' &#49FFF7  Медлительности VI на 10 секунд'
+    - ' '
+  cooldown: 25
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+explosivestick:
+  material: BLAZE_ROD
+  display-name: '&#FF7613В&#FF7C12з&#FF8210р&#FF890Fы&#FF8F0Dв&#FF950Cн&#FF9B0Aа&#FFA209я &#FFA408п&#FFAA07а&#FFB005л&#FFB604о&#FFBB03ч&#FFC101к&#FFC700а'
+  lore:
+    - ' '
+    - '&8Особенности:'
+    - '&7 • &fвызывает &#FF7613летящий фаербол, &fи'
+    - '&7   &fи при попадании, &#FF7613создаёт взрыв.'
+    - ' '
+  cooldown: 15 #в секундах
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+farewellrumble:
+  material: FIREWORK_STAR
+  display-name: '&#DCFFB9П&#D7F9B5р&#D2F3B1о&#CDEEACщ&#C8E8A8а&#C3E2A4л&#BEDCA0ь&#B9D69Bн&#B4D097ы&#AFCB93й &#AAC58Fг&#A5BF8Aу&#A0B986л'
+  lore:
+    - ' '
+    - '&8Особенности:'
+    - '&7 • &fотталкивает всех игроков'
+    - '&7   &fв радиусе 5 блоков'
+    - ' '
+  cooldown: 30
+  sound: BLOCK_BEACON_POWER_SELECT
+  power: 5 #на сколько отталкивать игроков при использовании? (в блоках)
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+stunitem:
+  material: NETHER_STAR
+  display-name: '&#EFEFEFС&#E6E6E6т&#DCDCDCа&#D3D3D3н'
+  lore:
+    - ''
+    - '&8Особенности:'
+    - '&7 • &fсоздаёт &7куб (30x30x30) &fна 15 секунд'
+    - '&7   &fигроки в нём &7не могут использовать'
+    - '&7   &fэндер-жемчуги и хорусы и &7накладывает'
+    - '&7   &7эффект Замедления 1 &fна всех, кроме'
+    - '&7   &fактиватора.'
+    - ''
+  cooldown: 30
+  sound: BLOCK_BEACON_ACTIVATE
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+  region:
+    radius: 15 #15=30 блоков радиуса
+    flags:
+      - 'ENDERPEARL;DENY'
+      - 'CHORUS_TELEPORT;DENY'
+    potion-effects:
+        - 'SLOW;600;1'
+    particle: SPELL_WITCH
+gravitationItem:
+  material: FEATHER
+  display-name: "&#FF7000Гравитация"
+  lore:
+    - "&7"
+    - "&5 &7Особенность и применение:"
+    - "&#FF8E49 - когда предмет в инвентаре, ваш персонаж"
+    - "&#FF8E49   не получает урон от падения."
+    - "&7"
+  actionbar: '&5▶ &fТолько что сработал эффект: &d«Гравитация»'
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+justiceItem:
+  material: POTION
+  display-name: "&#FF7000Справедливость"
+  lore:
+    - "&7"
+    - "&5 &7Особенность и применение:"
+    - "&#FF8E49 - когда предмет в инвентаре, вы получаете"
+    - "&#FF8E49   защиту от дебафов - плавное падение,"
+    - "&#FF8E49   медлительность, отравление, иссушение и слабость."
+    - "&7"
+  actionbar: '&5▶ &fТолько что сработал эффект: &d«Справедливость»'
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+  exceptionForTurtlePowerPotion: true # если true, то все равно выдаёт эффект замедления даже если он указан в disabled-effects
+  disabled-effects: # защита от дебафов
+    - 'SLOW_FALLING'
+    - 'SLOW'
+    - 'POISON'
+    - 'WHITHER'
+    - 'WEAKNESS'
+portHoleItem:
+  material: SEA_LANTERN
+  display-name: "&#E7E7E7Иллюминатор"
+  lore:
+    - "&7"
+    - "&5 &7Особенность и применение:"
+    - "&#E7E7E7 - при ударе, есть шанс 5% дать игроку,"
+    - "&#E7E7E7   по которому совершен удар,"
+    - "&#E7E7E7   эффект свечения на 15 секунд."
+    - "&7"
+  chance: 5 # шанс для выдачи эффекта жертве
+  time: 15 # продолжительность свечения (в секундах)
+  actionbar: '&5▶ &fТолько что сработал эффект: &d«Иллюминатор»'
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+  bedrockSupport:
+    enable: false # использовать кожаную броню вместо эффекта свечения
+    armorColor: '#DD7907'
+blindnessItem:
+  material: ENDER_EYE
+  display-name: "&#00C8D4Я&#00D0DDс&#00D8E5н&#00DFEEо&#00E7F6в&#00EFFFи&#00E7F6д&#00DFEEя&#00D8E5щ&#00D0DDи&#00C8D4й"
+  lore:
+    - "&7"
+    - "&5 &7Особенность и применение:"
+    - "&#00F1FF - при ударе, есть шанс 5% дать игроку,"
+    - "&#00F1FF   по которому совершен удар,"
+    - "&#00F1FF   эффект слепоты на 10 секунд."
+    - "&7"
+  chance: 5 # шанс для выдачи эффекта жертве
+  time: 10 # продолжительность свечения (в секундах)
+  actionbar: '&5▶ &fТолько что сработал эффект: &d«Ясновидящий»'
+  black-listed-worlds:
+    - spawn
+  black-listed-regions:
+    - region12345
+snowManItem:
+   material: SNOW_BLOCK
+   display-name: "&#AEF0FFС&#A7E7F5н&#A1DEECе&#9AD5E2г&#94CCD9о&#8DC3CFв&#87BAC6и&#80B1BCк"
+   lore:
+     - "&7"
+     - "&5 &7Особенность и применение:"
+     - "&#AEF0FF - при ударе, есть шанс 2% дать игроку,"
+     - "&#AEF0FF   по которому совершен удар,"
+     - "&#AEF0FF   эффект замедления на 5 секунд."
+     - "&7"
+   chance: 2
+   time: 5
+   actionbar: '&5▶ &fТолько что сработал эффект: &d«Снеговик»'
+   black-listed-worlds:
+     - spawn
+   black-listed-regions:
+     - region12345
